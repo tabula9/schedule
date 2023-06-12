@@ -1,0 +1,31 @@
+header {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: midnightblue;
+    text-align: center;
+}
+  
+.partial {
+    border: 1px solid red;
+    padding: 15px;
+}
+
+table th {
+  background-color: #fff;
+  padding: 10px 20px;
+  /* display: block; */
+  /* text-align: left; */
+}
+
+table td {
+  background-color: #fff;
+  padding: 10px 20px;
+  /* display: block; */
+}
+
+.notice {
+  background-color: #ccf;
+  padding: 5px;
+}
