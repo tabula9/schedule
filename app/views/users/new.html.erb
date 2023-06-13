@@ -18,8 +18,13 @@
     </tr>
 
     <tr>
-      <th><%= f.label :all_date ,"終日" %></th>
+      <th><%= f.label :all_date ,"終日の場合はチェックを入れます" %></th>
       <td><%= f.check_box :all_date , {}, "ture", "false" %></td>
+    </tr>
+
+    <tr>
+      <th><%= f.label :memo ,"スケジュールメモ" %></th>
+      <td><%= f.text_area :memo %></td>
     </tr>
   </table>
 

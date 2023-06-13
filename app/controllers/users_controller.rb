@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params.require(:user).permit(:title, :start_date, :end_date, :all_date))
+    @user = User.new(params.require(:user).permit(:title, :start_date, :end_date, :all_date, :memo))
     if @user.save
       flash[:notice] = "予定を追加しました"
       redirect_to :users
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def edit
