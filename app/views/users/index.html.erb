@@ -1,11 +1,17 @@
-<h3>予定一覧</h3>
+<body>
+<div class="container">
 
+<div>
+<div class="between">
+<h3>予定一覧</h3>
 <p><%= link_to "新規追加", :new_user %></p>
+</div>
 
 <% if flash[:notice] %>
    <p class="notice"><%= flash[:notice] %></p>
 <% end %>
 
+<div class="white">
 <table>
   <thead>
     <tr>
@@ -23,9 +29,9 @@
       <tr>
         <td><%= user.id %></td>
         <td><%= user.title %></td>
-        <td><%= user.start_date %></td>
-        <td><%= user.end_date %></td>
-        <td><%= user.all_date %></td>
+        <td><%= user.start_date.strftime("%Y/%m/%d") %></td>
+        <td><%= user.end_date.strftime("%Y/%m/%d") %></td>
+        <td><%= user.all_date ? '○' : '' %></td>
         <td><%= user.updated_at.to_s(:datetime_jp) %></td>
         <td>
         <%= link_to "詳細", user %>
@@ -34,9 +40,19 @@
           <%= link_to "編集", [:edit, user] %>
         </td>
         <td>
-          <%= link_to "削除", user, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+          <%= link_to "削除", user, method: :delete, data: { confirm: "予定を削除しますか？" } %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+
+<div class="white under">
+<p>予定合計<%= User.count %>件</p>
+<p class="thin">本日の日付<%= Date.today.strftime("%Y/%m/%d") %></p>
+</div>
+
+</div>
+</div>
+</body>

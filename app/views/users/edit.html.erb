@@ -1,5 +1,7 @@
 <h3>予定を編集してください</h3>
 
+<%= render "shared/error", obj: @user %>
+
 <%= form_with model: @user do |f| %>
   <table>
     <tr>
@@ -34,4 +36,8 @@
       <li><%= link_to "キャンセル", :users %></li>
     </ul>
   </div>
+<% end %>
+
+<% if flash[:notice] %>
+  <p class="notice"><%= flash[:notice] %></p>
 <% end %>

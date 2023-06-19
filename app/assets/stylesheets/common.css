@@ -12,20 +12,56 @@ header {
     padding: 15px;
 }
 
-table th {
+.white {
   background-color: #fff;
+}
+
+table th {
   padding: 10px 20px;
   /* display: block; */
-  /* text-align: left; */
+  text-align: left;
+  margin: 0;
 }
 
 table td {
-  background-color: #fff;
   padding: 10px 20px;
   /* display: block; */
+  border-top:2px solid #EEEEEE;
 }
 
 .notice {
   background-color: #ccf;
   padding: 5px;
+}
+
+body {
+  background-color: #EEEEEE;
+  width: 100%;
+}
+
+.container {
+  margin: 0 200px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.under {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+  padding: 10px 20px;
+}
+
+.thin {
+  color: #AAAAAA;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
 }

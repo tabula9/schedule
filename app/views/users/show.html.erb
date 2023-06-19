@@ -1,27 +1,37 @@
+<div class="container">
+<div>
+
 <div>
   <ul>
     <li><%= link_to "一覧に戻る", :users %></li>
   </ul>
 </div>
 
+<div class="between">
 <h3><%= @user.title %></h3>
+<%= button_to "編集", edit_user_path(@user), method: :get %>
+</div>
 
+<div class="white">
 <table>
   <tr>
     <th>開始日</th>
-    <td><%= @user.start_date %></td>
+    <td><%= @user.start_date.strftime("%Y/%m/%d") %></td>
   </tr>
   <tr>
     <th>終了日</th>
-    <td><%= @user.end_date %></td>
+    <td><%= @user.end_date.strftime("%Y/%m/%d") %></td>
   </tr>
   <tr>
     <th>終日</th>
-    <td><%= @user.all_date %></td>
+    <td><%= @user.all_date ? '○' : '' %></td>
   </tr>
   <tr>
     <th>スケジュールメモ</th>
     <td><%= @user.memo %></td>
   </tr>
 </table>
+</div>
 
+</div>
+</div>
