@@ -1,6 +1,10 @@
 <%= stylesheet_link_tag 'common', :media => "all" %>
 <%= stylesheet_link_tag 'new', :media => "all" %>
 
+<% if flash[:notice] %>
+  <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
 <div class="container">
   <h3>予定の新規追加</h3>
   <%= render "shared/error", obj: @user %>
@@ -35,14 +39,10 @@
 
     <div>
       <ul class="left">
-        <li><%= link_to "キャンセル", :users %></li>
+        <li><%= link_to "キャンセル", users_path, class: "btn-white" %></li>
         <li><%= f.submit "保存", class: "btn" %></li>
       </ul>
     </div>
     <% end %>
   </div>
 </div>
-
-<% if flash[:notice] %>
-  <p class="notice"><%= flash[:notice] %></p>
-<% end %>
