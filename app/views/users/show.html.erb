@@ -1,15 +1,18 @@
+<%= stylesheet_link_tag 'common', :media => "all" %>
+<%= stylesheet_link_tag 'show', :media => "all" %>
+
 <div class="container">
-<div>
+<div class="wid">
 
 <div>
   <ul>
-    <li><%= link_to "一覧に戻る", :users %></li>
+    <li><%= link_to "← 一覧に戻る", :users %></li>
   </ul>
 </div>
 
 <div class="between">
 <h3><%= @user.title %></h3>
-<%= button_to "編集", edit_user_path(@user), method: :get %>
+<%= button_to "編集", edit_user_path(@user), method: :get, class: "btn-blue" %>
 </div>
 
 <div class="white">

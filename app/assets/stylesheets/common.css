@@ -39,20 +39,6 @@ body {
   width: 100%;
 }
 
-.container {
-  margin: 0 200px;
-  width: 70%;
-  display: flex;
-  justify-content: center;
-}
-
-.under {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 36px;
-  padding: 10px 20px;
-}
-
 .thin {
   color: #AAAAAA;
 }
@@ -64,4 +50,24 @@ table {
 .between {
   display: flex;
   justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  color: white;
+  background-color: blue;
+  border-radius: 4px;
+  padding: 8px 20px;
+  font-weight: bold;
 }

@@ -1,0 +1,41 @@
+.container {
+    margin: 0 400px;
+}
+
+.white {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    border: none;
+    display: block;
+}
+table th {
+    display: block;
+}
+
+.no-block {
+    display: inline;
+    font-weight: normal;
+}
+
+textarea {
+    resize: none;
+    width:100%;
+    height:100px;
+  }
+
+.left {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+}
