@@ -7,7 +7,7 @@
 <div>
 <div class="between center">
 <h3>予定一覧</h3>
-<%= button_to "新規追加", :new_user, method: :get, class: "btn" %>
+<%= button_to "新規追加", :new_schedule, method: :get, class: "btn" %>
 </div>
 
 <% if flash[:notice] %>
@@ -37,13 +37,13 @@
         <td><%= user.all_date ? '○' : '' %></td>
         <td><%= user.updated_at.to_s(:datetime_jp) %></td>
         <td>
-        <%= link_to "詳細", user %>
+        <%= link_to "詳細", schedule_path(user) %>
         </td>
         <td>
-          <%= link_to "編集", [:edit, user] %>
+          <%= link_to "編集", edit_schedule_path(user) %>
         </td>
         <td>
-          <%= link_to "削除", user, method: :delete, data: { confirm: "予定を削除しますか？" } %>
+          <%= link_to "削除", schedule_path(user), method: :delete, data: { confirm: "予定を削除しますか？" } %>
         </td>
       </tr>
     <% end %>

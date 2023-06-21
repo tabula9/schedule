@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class SchedulesController < ApplicationController
   def index
     @users = User.all
   end
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(params.require(:user).permit(:title, :start_date, :end_date, :all_date, :memo))
     if @user.save
       flash[:notice] = "スケジュールを登録しました"
-      redirect_to :users
+      redirect_to :schedules
     else
       flash.now[:notice] = "スケジュールの登録に失敗しました"
       render "new"
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update(params.require(:user).permit(:title, :start_date, :end_date, :all_date, :memo))
       flash[:notice] = "スケジュールを更新しました"
-      redirect_to :users
+      redirect_to :schedules
     else
       flash.now[:notice] = "スケジュールの更新に失敗しました"
       render "edit"
@@ -41,6 +41,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     flash[:notice] = "予定を削除しました"
-    redirect_to :users
+    redirect_to :schedules
   end
 end

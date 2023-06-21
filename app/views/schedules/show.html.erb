@@ -6,13 +6,13 @@
 
 <div>
   <ul>
-    <li><%= link_to "← 一覧に戻る", :users %></li>
+    <li><%= link_to "← 一覧に戻る", schedules_path %></li>
   </ul>
 </div>
 
 <div class="between center">
 <h3><%= @user.title %></h3>
-<%= button_to "編集", edit_user_path(@user), method: :get, class: "btn-blue" %>
+<%= button_to "編集", edit_schedule_path(@user), method: :get, class: "btn-blue" %>
 </div>
 
 <div class="white">
