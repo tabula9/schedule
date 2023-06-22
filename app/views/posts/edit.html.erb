@@ -7,10 +7,10 @@
 
 <div class="container">
 <h3>予定を編集してください</h3>
-<%= render "shared/error", obj: @user %>
+<%= render "shared/error", obj: @post %>
 
 <div class="white">
-<%= form_with model: @user,url: schedule_path, method: :patch do |f| %>
+<%= form_with model: @post,url: post_path, method: :patch do |f| %>
   <table>
     <tr>
       <th><%= f.label :title ,"タイトル" %></th>
@@ -40,7 +40,7 @@
 
   <div>
     <ul class="left">
-      <li><%= link_to "キャンセル", schedules_path, class: "btn-white" %></li>
+      <li><%= link_to "キャンセル", posts_path, class: "btn-white" %></li>
       <li><%= f.submit "保存", class: "btn" %></li>
     </ul>
   </div>

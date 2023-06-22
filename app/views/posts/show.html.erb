@@ -6,32 +6,32 @@
 
 <div>
   <ul>
-    <li><%= link_to "← 一覧に戻る", schedules_path %></li>
+    <li><%= link_to "← 一覧に戻る", posts_path %></li>
   </ul>
 </div>
 
 <div class="between center">
-<h3><%= @user.title %></h3>
-<%= button_to "編集", edit_schedule_path(@user), method: :get, class: "btn-blue" %>
+<h3><%= @post.title %></h3>
+<%= button_to "編集", edit_post_path(@post), method: :get, class: "btn-blue" %>
 </div>
 
 <div class="white">
 <table>
   <tr>
     <th>開始日</th>
-    <td><%= @user.start_date.strftime("%Y/%m/%d") %></td>
+    <td><%= @post.start_date.strftime("%Y/%m/%d") %></td>
   </tr>
   <tr>
     <th>終了日</th>
-    <td><%= @user.end_date.strftime("%Y/%m/%d") %></td>
+    <td><%= @post.end_date.strftime("%Y/%m/%d") %></td>
   </tr>
   <tr>
     <th>終日</th>
-    <td><%= @user.all_date ? '○' : '' %></td>
+    <td><%= @post.all_date ? '○' : '' %></td>
   </tr>
   <tr>
     <th>スケジュールメモ</th>
-    <td><%= @user.memo %></td>
+    <td><%= @post.memo %></td>
   </tr>
 </table>
 </div>
