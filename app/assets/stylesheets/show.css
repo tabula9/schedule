@@ -1,0 +1,42 @@
+.container {
+    width: 100%;
+}
+
+.wid {
+    margin: 0 400px;
+}
+
+table th {
+    background-color: #F0F8FF;
+    width: 30%;
+    border:2px solid #EEEEEE;
+    border-right: none;
+}
+
+table td {
+    width: 70%;
+    border:2px solid #EEEEEE;
+    border-left: none;
+}
+
+table {
+    display: block;
+    width: 90%;
+}
+
+.white {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    height: 300px;
+}
+
+.btn-blue {
+    color: blue;
+    background-color: #EEEEEE;
+    border: 2px solid blue;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
